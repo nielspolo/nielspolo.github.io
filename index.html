@@ -43,11 +43,18 @@
   .section { padding: 7rem 4rem; }
   .section-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
   .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.15; margin-bottom: 1.5rem; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+
+  /* ABOUT WITH PHOTO */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .about-photo-wrap { position: relative; }
+  .about-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; border: 1px solid rgba(201,168,76,0.2); }
+  .about-photo-badge { position: absolute; bottom: -1.5rem; left: -1.5rem; background: var(--gold); color: var(--dark); padding: 1rem 1.5rem; font-family: 'Playfair Display', serif; }
+  .about-photo-badge strong { display: block; font-size: 1.4rem; font-weight: 700; }
+  .about-photo-badge span { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  .about-text { padding-top: 0.5rem; }
   .about-text p { font-weight: 300; color: rgba(247,242,232,0.7); line-height: 1.9; font-size: 1rem; margin-bottom: 1.2rem; }
-  .about-card { background: var(--mid); border: 1px solid rgba(201,168,76,0.15); padding: 2.5rem; position: relative; }
-  .about-card::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 6rem; color: rgba(201,168,76,0.15); position: absolute; top: -1rem; left: 1.5rem; line-height: 1; }
-  .quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; line-height: 1.6; color: rgba(247,242,232,0.85); margin-bottom: 1.5rem; }
+  .about-quote { border-left: 2px solid var(--gold); padding-left: 1.5rem; margin: 2rem 0; }
+  .about-quote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; line-height: 1.6; color: rgba(247,242,232,0.85); margin: 0; }
   .credentials { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 2rem; }
   .cred { display: flex; align-items: center; gap: 1rem; }
   .cred-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
@@ -105,6 +112,7 @@
     .section { padding: 4rem 1.5rem; }
     .divider { margin: 0 1.5rem; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-photo-badge { bottom: 1rem; left: 1rem; }
     .services-grid { grid-template-columns: 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
@@ -148,11 +156,21 @@
 
 <section class="section" id="about">
   <div class="about-grid">
+    <div class="about-photo-wrap">
+      <img src="niels.jpg" alt="Niels van Baasbank on horseback" class="about-photo">
+      <div class="about-photo-badge">
+        <strong>+3</strong>
+        <span>Highest Handicap</span>
+      </div>
+    </div>
     <div class="about-text">
       <p class="section-label">About Niels</p>
       <h2 class="section-title">30 Years of Polo.<br>One Passion.</h2>
       <p>Niels van Baasbank is a Dutch polo professional with over 30 years of international coaching and club management experience, including 20 years based in Dubai. Currently Head Coach at Desert Palm Polo Club, he brings a rare combination of playing excellence and coaching expertise.</p>
-      <p>His career spans founding the first polo academy in the Netherlands, managing Emaar's flagship Dubai Polo &amp; Equestrian Club, and coaching hundreds of students from complete beginners to competitive players. Every session is built around technique, horsemanship, and genuine passion for the sport.</p>
+      <p>His career spans founding the first polo academy in the Netherlands, managing Emaar's flagship Dubai Polo &amp; Equestrian Club, and coaching hundreds of students from complete beginners to competitive players.</p>
+      <div class="about-quote">
+        <p>"Polo is not just a sport — it is a conversation between horse and rider, strategy and instinct, discipline and freedom."</p>
+      </div>
       <div class="credentials">
         <div class="cred"><div class="cred-dot"></div><span class="cred-text">HPA Level 2 Coach (2024)</span></div>
         <div class="cred"><div class="cred-dot"></div><span class="cred-text">HPA Overseas Polo Coach — renewed annually</span></div>
@@ -160,13 +178,6 @@
         <div class="cred"><div class="cred-dot"></div><span class="cred-text">Former Polo Manager, Dubai Polo &amp; Equestrian Club (Emaar)</span></div>
         <div class="cred"><div class="cred-dot"></div><span class="cred-text">Founder, The Polo Company — The Hague, Netherlands</span></div>
         <div class="cred"><div class="cred-dot"></div><span class="cred-text">First Aid Responder (2021 &amp; 2024)</span></div>
-      </div>
-    </div>
-    <div>
-      <div class="about-card">
-        <p class="quote">"Polo is not just a sport — it is a conversation between horse and rider, strategy and instinct, discipline and freedom."</p>
-        <div style="width: 40px; height: 1px; background: var(--gold); margin-bottom: 1rem;"></div>
-        <p style="font-size: 0.8rem; color: rgba(247,242,232,0.45); letter-spacing: 0.1em; text-transform: uppercase;">— Niels van Baasbank</p>
       </div>
     </div>
   </div>
