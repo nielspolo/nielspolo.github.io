@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Niels van Baasbank · Polo Coach</title>
+<title>Niels van Baasbank · Polo Coach Dubai</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -66,7 +66,7 @@
   .testimonial { background: var(--mid); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; }
   .testimonial-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; line-height: 1.7; color: rgba(247,242,232,0.8); margin-bottom: 1.5rem; }
   .testimonial-author { display: flex; align-items: center; gap: 1rem; }
-  .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(201,168,76,0.2); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold); }
+  .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(201,168,76,0.2); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold); flex-shrink: 0; }
   .author-name { font-size: 0.85rem; font-weight: 500; }
   .author-title { font-size: 0.75rem; color: rgba(247,242,232,0.45); }
   .stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 1rem; }
@@ -82,7 +82,8 @@
   .form-group label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,242,232,0.45); }
   .form-group input, .form-group select, .form-group textarea { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.15); padding: 0.85rem 1rem; color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.3s; }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: rgba(201,168,76,0.5); }
-  .form-group select { -webkit-appearance: none; cursor: pointer; background-color: rgba(255,255,255,0.04); }
+  .form-group select { -webkit-appearance: none; cursor: pointer; background-color: rgba(14,14,14,0.9); }
+  .form-group select option { background: #1a1a1a; color: var(--cream); }
   .form-group textarea { resize: vertical; min-height: 100px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .submit-btn { background: var(--gold); color: var(--dark); padding: 1rem; font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; border: none; cursor: pointer; margin-top: 0.5rem; transition: opacity 0.3s; }
@@ -95,7 +96,6 @@
   .footer-links a:hover { color: var(--gold); }
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
@@ -129,18 +129,18 @@
   <div class="hero-pattern"></div>
   <div class="hero-accent"></div>
   <div class="hero-content">
-    <span class="hero-tag">Niels van Baasbank · Professional Polo Coach · Dubai</span>
+    <span class="hero-tag">Niels van Baasbank · HPA Level 2 Coach · Desert Palm Polo Club · Dubai</span>
     <h1>Master the<br>Art of <em>Polo</em></h1>
-    <p class="hero-sub">Private and group coaching for all levels — from beginner riders to competitive tournament players. Develop technique, strategy, and confidence on the field.</p>
+    <p class="hero-sub">Private and group coaching for all levels — from complete beginners to competitive tournament players. 30 years of international experience, based at Desert Palm Polo Club, Dubai.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Session</button>
       <button class="btn-outline" onclick="document.getElementById('coaching').scrollIntoView({behavior:'smooth'})">View Programs</button>
     </div>
   </div>
   <div class="hero-stats">
-    <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Years Coaching</span></div>
+    <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Years Experience</span></div>
     <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Students Trained</span></div>
-    <div class="stat"><span class="stat-num">12</span><span class="stat-label">Tournaments Won</span></div>
+    <div class="stat"><span class="stat-num">+3</span><span class="stat-label">Highest Handicap</span></div>
   </div>
 </section>
 
@@ -150,14 +150,16 @@
   <div class="about-grid">
     <div class="about-text">
       <p class="section-label">About Niels</p>
-      <h2 class="section-title">A Coach Who Has<br>Played at the Top</h2>
-      <p>With over 15 years of experience competing at national and international levels, Niels van Baasbank brings firsthand knowledge of what it takes to excel in polo — both technically and mentally.</p>
-      <p>His coaching philosophy is built on precision, patience, and passion. Whether you're picking up a mallet for the first time or preparing for your next season, Niels tailors every session to your specific goals.</p>
+      <h2 class="section-title">30 Years of Polo.<br>One Passion.</h2>
+      <p>Niels van Baasbank is a Dutch polo professional with over 30 years of international coaching and club management experience, including 20 years based in Dubai. Currently Head Coach at Desert Palm Polo Club, he brings a rare combination of playing excellence and coaching expertise.</p>
+      <p>His career spans founding the first polo academy in the Netherlands, managing Emaar's flagship Dubai Polo &amp; Equestrian Club, and coaching hundreds of students from complete beginners to competitive players. Every session is built around technique, horsemanship, and genuine passion for the sport.</p>
       <div class="credentials">
-        <div class="cred"><div class="cred-dot"></div><span class="cred-text">10-Goal Handicap Player</span></div>
-        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Certified by the Hurlingham Polo Association</span></div>
-        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Former National Team Member</span></div>
-        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Specialist in Equestrian &amp; Stick &amp; Ball Training</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">HPA Level 2 Coach (2024)</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">HPA Overseas Polo Coach — renewed annually</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Playing Handicap +1 (career high +3)</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Former Polo Manager, Dubai Polo &amp; Equestrian Club (Emaar)</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Founder, The Polo Company — The Hague, Netherlands</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">First Aid Responder (2021 &amp; 2024)</span></div>
       </div>
     </div>
     <div>
@@ -179,13 +181,13 @@
     <div class="service-card">
       <div class="service-icon">🐎</div>
       <h3>Beginner Foundations</h3>
-      <p>Learn proper grip, stance, and horse control in a safe, guided environment. Ideal for riders new to polo or equestrian sports.</p>
+      <p>Learn proper grip, stance, and horse control in a safe, guided environment. Niels makes polo feel accessible and exciting from your very first session.</p>
       <span class="service-tag">From 0 Handicap →</span>
     </div>
     <div class="service-card">
       <div class="service-icon">🏑</div>
       <h3>Stick &amp; Ball Clinics</h3>
-      <p>Intensive sessions focused on mallet technique, swing mechanics, and positional play to sharpen your on-field performance.</p>
+      <p>Intensive sessions focused on mallet technique, swing mechanics, and positional play. Structured feedback that creates measurable improvement every session.</p>
       <span class="service-tag">All Levels →</span>
     </div>
     <div class="service-card">
@@ -197,7 +199,7 @@
     <div class="service-card">
       <div class="service-icon">👤</div>
       <h3>Private 1-on-1 with Niels</h3>
-      <p>Fully personalised sessions tailored to your specific weaknesses, schedule, and ambitions. The fastest path to improvement.</p>
+      <p>Fully personalised sessions tailored to your specific weaknesses, goals, and schedule. The fastest and most effective path to improvement.</p>
       <span class="service-tag">Most Popular →</span>
     </div>
     <div class="service-card">
@@ -208,9 +210,9 @@
     </div>
     <div class="service-card">
       <div class="service-icon">🌟</div>
-      <h3>Youth Development</h3>
-      <p>Nurturing the next generation of players with age-appropriate horsemanship, sportsmanship, and foundational polo skills.</p>
-      <span class="service-tag">Ages 8–18 →</span>
+      <h3>Corporate &amp; Social Polo</h3>
+      <p>A unique, unforgettable experience for corporate groups and social events. Niels creates a professional, fun, and safe introduction to the sport of kings.</p>
+      <span class="service-tag">Groups Welcome →</span>
     </div>
   </div>
 </section>
@@ -219,38 +221,70 @@
 
 <section class="section" id="testimonials">
   <p class="section-label">Testimonials</p>
-  <h2 class="section-title">What Niels' Students Say</h2>
+  <h2 class="section-title">What Students Say About Niels</h2>
   <div class="testimonials-grid">
     <div class="testimonial">
       <div class="stars">★★★★★</div>
-      <p class="testimonial-text">"Within three months of training with Niels, my handicap jumped from 0 to 2. His attention to detail and structured approach is unlike anything I've experienced."</p>
+      <p class="testimonial-text">"Coaching with Niels has absolutely changed my polo. He enabled me to get better with different kinds of horses, my forehand completely changed to one which is more relaxed with better technique. I'm more mindful and able to analyse my own mistakes better."</p>
       <div class="testimonial-author">
-        <div class="author-avatar">JM</div>
-        <div><p class="author-name">James M.</p><p class="author-title">Amateur Player, Dubai Polo Club</p></div>
+        <div class="author-avatar">MU</div>
+        <div><p class="author-name">Muzzammil</p><p class="author-title">Student, Desert Palm Polo Club</p></div>
       </div>
     </div>
     <div class="testimonial">
       <div class="stars">★★★★★</div>
-      <p class="testimonial-text">"My daughter started with zero riding experience. Now she's competing at junior level. Niels' patience and expertise throughout her journey has been extraordinary."</p>
+      <p class="testimonial-text">"I had the pleasure of taking private lessons with Niels twice a week for more than 2 years. He helped me progress from beginner to a confident player. Amongst my best memories from the UAE."</p>
       <div class="testimonial-author">
-        <div class="author-avatar">SL</div>
-        <div><p class="author-name">Sarah L.</p><p class="author-title">Parent, Youth Program</p></div>
+        <div class="author-avatar">TB</div>
+        <div><p class="author-name">Thierry B.</p><p class="author-title">Private Student, Dubai</p></div>
       </div>
     </div>
     <div class="testimonial">
       <div class="stars">★★★★★</div>
-      <p class="testimonial-text">"Our corporate polo day was transformed into a genuine learning experience by Niels. Professional, engaging, and brilliantly organised from start to finish."</p>
+      <p class="testimonial-text">"Niels has a no-nonsense approach to coaching. Great knowledge of strategy and horses — you come away not only with a good understanding of polo strategy but more importantly, how to be a great horseman."</p>
       <div class="testimonial-author">
-        <div class="author-avatar">RK</div>
-        <div><p class="author-name">Richard K.</p><p class="author-title">CEO, Corporate Event Client</p></div>
+        <div class="author-avatar">SE</div>
+        <div><p class="author-name">Sarah El Abdli</p><p class="author-title">Student, Dubai</p></div>
       </div>
     </div>
     <div class="testimonial">
       <div class="stars">★★★★★</div>
-      <p class="testimonial-text">"Niels gave our team a completely new tactical understanding of the game. We placed second in the regional championships — our best result ever."</p>
+      <p class="testimonial-text">"I started polo with Niels and instantly fell in love with the sport. His energy, patience, and passion make every lesson something to look forward to. Truly the best coach to start polo with or take your game to another level."</p>
       <div class="testimonial-author">
-        <div class="author-avatar">AT</div>
-        <div><p class="author-name">Ahmed T.</p><p class="author-title">Team Captain, 6-Goal Tournament</p></div>
+        <div class="author-avatar">KA</div>
+        <div><p class="author-name">Khalifa A.</p><p class="author-title">Student, Dubai</p></div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Niels has a unique ability to understand his students and tailor each session to what works best for the individual. This approach built my confidence incredibly quickly. I genuinely look forward to every session."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AM</div>
+        <div><p class="author-name">Amina</p><p class="author-title">Student, Desert Palm Polo Club</p></div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"I call Niels the fixer! He fixes techniques I have been practising wrong for years. He tackles every move until correct and it's great to see sudden improvement. He builds it up around a storyline which is easy to remember!"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">ZS</div>
+        <div><p class="author-name">Zsuzsa</p><p class="author-title">Student, Dubai</p></div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Training with Niels has been a game changer. He's a no-nonsense coach who genuinely knows how to teach. He adapts constantly, finding different ways to explain technique until it truly clicks. An excellent coach for anyone serious about progressing."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">LT</div>
+        <div><p class="author-name">Laura T.</p><p class="author-title">Student, Dubai</p></div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"I met Niels at the very beginning of my polo journey and he gave me the foundation I still build on today. Every time I'm back in Dubai, I return to train with him because I trust his approach and professionalism completely."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RE</div>
+        <div><p class="author-name">Renata</p><p class="author-title">Student, Dubai</p></div>
       </div>
     </div>
   </div>
@@ -270,11 +304,11 @@
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">📞</div>
-        <span class="contact-detail-text">+971 501896869</span>
+        <span class="contact-detail-text">+971 50 189 6869</span>
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">✉️</div>
-        <span class="contact-detail-text">niels@nielspolo.com</span>
+        <span class="contact-detail-text">vanbaasbank@gmail.com</span>
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">🌐</div>
@@ -287,34 +321,33 @@
     </div>
     <div class="contact-form">
       <div class="form-row">
-        <div class="form-group"><label>First Name</label><input type="text" placeholder="First Name"></div>
-        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Family Name"></div>
+        <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Your first name"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Your last name"></div>
       </div>
-      <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
-      <div class="form-group"><label>Phone</label><input type="tel" placeholder="+971 50 000 0000"></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="+971 50 000 0000"></div>
       <div class="form-group"><label>Program Interest</label>
-        <select>
+        <select name="program">
           <option value="">Select a program...</option>
           <option>Beginner Foundations</option>
           <option>Stick &amp; Ball Clinics</option>
           <option>Tournament Preparation</option>
           <option>Private 1-on-1 with Niels</option>
           <option>Team Training</option>
-          <option>Youth Development</option>
+          <option>Corporate &amp; Social Polo</option>
         </select>
       </div>
-      <div class="form-group"><label>Message</label><textarea placeholder="Tell Niels about your experience level and goals..."></textarea></div>
+      <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell Niels about your experience level and goals..."></textarea></div>
       <button class="submit-btn" onclick="alert('Thank you! Niels will be in touch within 24 hours.')">Send Enquiry →</button>
     </div>
   </div>
 </section>
 
 <footer>
-  <span class="footer-copy">© 2026 Niels van Baasbank Polo Coaching · nielspolo.com</span>
+  <span class="footer-copy">© 2026 Niels van Baasbank · Head Coach, Desert Palm Polo Club · nielspolo.com</span>
   <div class="footer-links">
-    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://instagram.com/desertpalmpoloclub" target="_blank">Instagram</a>
     <a href="https://wa.me/971501896869" target="_blank">WhatsApp</a>
-    <a href="#">Privacy Policy</a>
   </div>
 </footer>
 
