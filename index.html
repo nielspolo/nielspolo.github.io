@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niels van Baasbank · Polo Coach</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --gold: #C9A84C; --dark: #0E0E0E; --cream: #F7F2E8; --mid: #2A2A2A; }
+  body { font-family: 'Jost', sans-serif; background: var(--dark); color: var(--cream); overflow-x: hidden; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.2rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(14,14,14,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(201,168,76,0.15); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.05rem; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: rgba(247,242,232,0.7); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { background: var(--gold); color: var(--dark); padding: 0.5rem 1.4rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; border: none; cursor: pointer; transition: opacity 0.3s; font-family: 'Jost', sans-serif; }
+  .nav-cta:hover { opacity: 0.85; }
+
+  .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0E0E0E 0%, #1a1208 40%, #0E0E0E 100%); }
+  .hero-pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(201,168,76,0.03) 80px, rgba(201,168,76,0.03) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(201,168,76,0.03) 80px, rgba(201,168,76,0.03) 81px); }
+  .hero-accent { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.08); }
+  .hero-accent::before { content: ''; position: absolute; inset: 60px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.12); }
+  .hero-accent::after { content: ''; position: absolute; inset: 130px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.18); }
+  .hero-content { position: relative; padding: 0 4rem; max-width: 800px; animation: fadeUp 1s ease both; }
+  .hero-tag { display: inline-block; font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(201,168,76,0.3); }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.05; font-weight: 900; margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub { font-size: 1.05rem; font-weight: 300; color: rgba(247,242,232,0.65); line-height: 1.8; max-width: 500px; margin-bottom: 2.5rem; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--gold); color: var(--dark); padding: 0.9rem 2.2rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; border: none; cursor: pointer; transition: opacity 0.3s; font-family: 'Jost', sans-serif; }
+  .btn-outline { background: transparent; color: var(--cream); padding: 0.9rem 2.2rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; border: 1px solid rgba(247,242,232,0.3); cursor: pointer; transition: border-color 0.3s, color 0.3s; font-family: 'Jost', sans-serif; }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .hero-stats { position: absolute; bottom: 3rem; right: 4rem; display: flex; gap: 3rem; animation: fadeUp 1.2s 0.3s ease both; }
+  .stat { text-align: right; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--gold); display: block; }
+  .stat-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,242,232,0.5); }
+
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent); margin: 0 4rem; }
+
+  .section { padding: 7rem 4rem; }
+  .section-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.15; margin-bottom: 1.5rem; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-text p { font-weight: 300; color: rgba(247,242,232,0.7); line-height: 1.9; font-size: 1rem; margin-bottom: 1.2rem; }
+  .about-card { background: var(--mid); border: 1px solid rgba(201,168,76,0.15); padding: 2.5rem; position: relative; }
+  .about-card::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 6rem; color: rgba(201,168,76,0.15); position: absolute; top: -1rem; left: 1.5rem; line-height: 1; }
+  .quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; line-height: 1.6; color: rgba(247,242,232,0.85); margin-bottom: 1.5rem; }
+  .credentials { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 2rem; }
+  .cred { display: flex; align-items: center; gap: 1rem; }
+  .cred-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+  .cred-text { font-size: 0.85rem; color: rgba(247,242,232,0.65); letter-spacing: 0.05em; }
+
+  .services-bg { background: #111; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; margin-top: 3rem; background: rgba(201,168,76,0.1); }
+  .service-card { background: #111; padding: 2.5rem; transition: background 0.3s; cursor: pointer; }
+  .service-card:hover { background: #181510; }
+  .service-icon { font-size: 1.8rem; margin-bottom: 1.5rem; }
+  .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 600; }
+  .service-card p { font-size: 0.88rem; font-weight: 300; color: rgba(247,242,232,0.55); line-height: 1.75; }
+  .service-tag { display: inline-block; margin-top: 1.2rem; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+
+  .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .testimonial { background: var(--mid); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; }
+  .testimonial-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; line-height: 1.7; color: rgba(247,242,232,0.8); margin-bottom: 1.5rem; }
+  .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+  .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(201,168,76,0.2); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold); }
+  .author-name { font-size: 0.85rem; font-weight: 500; }
+  .author-title { font-size: 0.75rem; color: rgba(247,242,232,0.45); }
+  .stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 1rem; }
+
+  .contact-bg { background: #0a0a0a; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 3rem; }
+  .contact-info p { font-size: 0.95rem; font-weight: 300; color: rgba(247,242,232,0.6); line-height: 1.9; margin-bottom: 2rem; }
+  .contact-detail { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  .contact-detail-icon { width: 36px; height: 36px; border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .contact-detail-text { font-size: 0.85rem; color: rgba(247,242,232,0.65); }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,242,232,0.45); }
+  .form-group input, .form-group select, .form-group textarea { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.15); padding: 0.85rem 1rem; color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.3s; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: rgba(201,168,76,0.5); }
+  .form-group select { -webkit-appearance: none; cursor: pointer; background-color: rgba(255,255,255,0.04); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .submit-btn { background: var(--gold); color: var(--dark); padding: 1rem; font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; border: none; cursor: pointer; margin-top: 0.5rem; transition: opacity 0.3s; }
+  .submit-btn:hover { opacity: 0.85; }
+
+  footer { padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,168,76,0.1); }
+  .footer-copy { font-size: 0.75rem; color: rgba(247,242,232,0.3); letter-spacing: 0.08em; }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-size: 0.75rem; color: rgba(247,242,232,0.35); text-decoration: none; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero-content { padding: 0 1.5rem; }
+    .hero-stats { right: 1.5rem; gap: 1.5rem; bottom: 2rem; }
+    .stat-num { font-size: 1.6rem; }
+    .section { padding: 4rem 1.5rem; }
+    .divider { margin: 0 1.5rem; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Niels van Baasbank · Polo</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#coaching">Coaching</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Session</button>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Niels van Baasbank · Professional Polo Coach · Dubai</span>
+    <h1>Master the<br>Art of <em>Polo</em></h1>
+    <p class="hero-sub">Private and group coaching for all levels — from beginner riders to competitive tournament players. Develop technique, strategy, and confidence on the field.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Session</button>
+      <button class="btn-outline" onclick="document.getElementById('coaching').scrollIntoView({behavior:'smooth'})">View Programs</button>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Years Coaching</span></div>
+    <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Students Trained</span></div>
+    <div class="stat"><span class="stat-num">12</span><span class="stat-label">Tournaments Won</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-label">About Niels</p>
+      <h2 class="section-title">A Coach Who Has<br>Played at the Top</h2>
+      <p>With over 15 years of experience competing at national and international levels, Niels van Baasbank brings firsthand knowledge of what it takes to excel in polo — both technically and mentally.</p>
+      <p>His coaching philosophy is built on precision, patience, and passion. Whether you're picking up a mallet for the first time or preparing for your next season, Niels tailors every session to your specific goals.</p>
+      <div class="credentials">
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">10-Goal Handicap Player</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Certified by the Hurlingham Polo Association</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Former National Team Member</span></div>
+        <div class="cred"><div class="cred-dot"></div><span class="cred-text">Specialist in Equestrian &amp; Stick &amp; Ball Training</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="about-card">
+        <p class="quote">"Polo is not just a sport — it is a conversation between horse and rider, strategy and instinct, discipline and freedom."</p>
+        <div style="width: 40px; height: 1px; background: var(--gold); margin-bottom: 1rem;"></div>
+        <p style="font-size: 0.8rem; color: rgba(247,242,232,0.45); letter-spacing: 0.1em; text-transform: uppercase;">— Niels van Baasbank</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section services-bg" id="coaching">
+  <p class="section-label">Programs</p>
+  <h2 class="section-title">Coaching for Every Level</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🐎</div>
+      <h3>Beginner Foundations</h3>
+      <p>Learn proper grip, stance, and horse control in a safe, guided environment. Ideal for riders new to polo or equestrian sports.</p>
+      <span class="service-tag">From 0 Handicap →</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏑</div>
+      <h3>Stick &amp; Ball Clinics</h3>
+      <p>Intensive sessions focused on mallet technique, swing mechanics, and positional play to sharpen your on-field performance.</p>
+      <span class="service-tag">All Levels →</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏆</div>
+      <h3>Tournament Preparation</h3>
+      <p>Strategic team coaching, match analysis, and mental preparation to get you and your team performing at peak competition level.</p>
+      <span class="service-tag">Competitive Players →</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👤</div>
+      <h3>Private 1-on-1 with Niels</h3>
+      <p>Fully personalised sessions tailored to your specific weaknesses, schedule, and ambitions. The fastest path to improvement.</p>
+      <span class="service-tag">Most Popular →</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👥</div>
+      <h3>Team Training</h3>
+      <p>Build chemistry, communication, and coordinated strategy across your team. Available for clubs, private groups, and corporate events.</p>
+      <span class="service-tag">Groups of 4–8 →</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌟</div>
+      <h3>Youth Development</h3>
+      <p>Nurturing the next generation of players with age-appropriate horsemanship, sportsmanship, and foundational polo skills.</p>
+      <span class="service-tag">Ages 8–18 →</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="testimonials">
+  <p class="section-label">Testimonials</p>
+  <h2 class="section-title">What Niels' Students Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Within three months of training with Niels, my handicap jumped from 0 to 2. His attention to detail and structured approach is unlike anything I've experienced."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JM</div>
+        <div><p class="author-name">James M.</p><p class="author-title">Amateur Player, Dubai Polo Club</p></div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"My daughter started with zero riding experience. Now she's competing at junior level. Niels' patience and expertise throughout her journey has been extraordinary."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">SL</div>
+        <div><p class="author-name">Sarah L.</p><p class="author-title">Parent, Youth Program</p></div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Our corporate polo day was transformed into a genuine learning experience by Niels. Professional, engaging, and brilliantly organised from start to finish."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RK</div>
+        <div><p class="author-name">Richard K.</p><p class="author-title">CEO, Corporate Event Client</p></div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Niels gave our team a completely new tactical understanding of the game. We placed second in the regional championships — our best result ever."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AT</div>
+        <div><p class="author-name">Ahmed T.</p><p class="author-title">Team Captain, 6-Goal Tournament</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section contact-bg" id="contact">
+  <p class="section-label">Get in Touch</p>
+  <h2 class="section-title">Book a Session with Niels</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>Ready to take your polo to the next level? Fill in the form and Niels will get back to you within 24 hours to discuss your goals and find the right program for you.</p>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <span class="contact-detail-text">Dubai Polo &amp; Equestrian Club, UAE</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <span class="contact-detail-text">+971 50 000 0000</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <span class="contact-detail-text">niels@nielspolo.com</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🌐</div>
+        <span class="contact-detail-text">nielspolo.com</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🕐</div>
+        <span class="contact-detail-text">Sessions available 7 days · 6am – 7pm</span>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Khalid"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Al Maktoum"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="+971 50 000 0000"></div>
+      <div class="form-group"><label>Program Interest</label>
+        <select>
+          <option value="">Select a program...</option>
+          <option>Beginner Foundations</option>
+          <option>Stick &amp; Ball Clinics</option>
+          <option>Tournament Preparation</option>
+          <option>Private 1-on-1 with Niels</option>
+          <option>Team Training</option>
+          <option>Youth Development</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell Niels about your experience level and goals..."></textarea></div>
+      <button class="submit-btn" onclick="alert('Thank you! Niels will be in touch within 24 hours.')">Send Enquiry →</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2026 Niels van Baasbank Polo Coaching · nielspolo.com</span>
+  <div class="footer-links">
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://wa.me/971500000000" target="_blank">WhatsApp</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
