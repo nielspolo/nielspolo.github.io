@@ -84,6 +84,16 @@
   .author-title { font-size: 0.75rem; color: rgba(247,242,232,0.65); }
   .stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 1rem; }
 
+  .tips-bg { background: #111; }
+  .tips-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+  .tip-card { background: var(--dark); border: 1px solid rgba(201,168,76,0.15); overflow: hidden; transition: border-color 0.3s; }
+  .tip-card:hover { border-color: rgba(201,168,76,0.4); }
+  .tip-video-wrap { position: relative; width: 100%; aspect-ratio: 9/16; background: #000; }
+  .tip-video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tip-card-body { padding: 1.3rem 1.4rem 1.6rem; }
+  .tip-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .tip-card p { font-size: 0.82rem; color: rgba(247,242,232,0.75); letter-spacing: 0.04em; text-transform: uppercase; }
+
   .contact-bg { background: #0a0a0a; }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 3rem; }
   .contact-info p { font-size: 0.95rem; font-weight: 400; color: rgba(247,242,232,0.9); line-height: 1.9; margin-bottom: 2rem; }
@@ -120,6 +130,7 @@
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .about-photo-badge { bottom: 1rem; left: 1rem; }
     .services-grid { grid-template-columns: 1fr; }
+    .tips-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .testimonials-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
   }
@@ -132,6 +143,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#coaching">Coaching</a></li>
+    <li><a href="#tips">Video Tips</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -231,6 +243,48 @@
       <h3>Corporate &amp; Social Polo</h3>
       <p>A unique, unforgettable experience for corporate groups and social events. Niels creates a professional, fun, and safe introduction to the sport of kings.</p>
       <span class="service-tag">Groups Welcome →</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section tips-bg" id="tips">
+  <p class="section-label">Free Coaching Tips</p>
+  <h2 class="section-title">Watch &amp; Learn with Niels</h2>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-video-wrap">
+        <video controls playsinline preload="metadata" poster="">
+          <source src="videos/tip-foot-mallet.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tip-card-body">
+        <h3>Foot Mallet</h3>
+        <p>Offside Practice</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-video-wrap">
+        <video controls playsinline preload="metadata" poster="">
+          <source src="videos/tip-common-mistakes.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tip-card-body">
+        <h3>Most Common Mistakes</h3>
+        <p>Coaching Insight</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-video-wrap">
+        <video controls playsinline preload="metadata" poster="">
+          <source src="videos/tip-mallet-position.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tip-card-body">
+        <h3>Mallet Position</h3>
+        <p>Practice Advice</p>
+      </div>
     </div>
   </div>
 </section>
