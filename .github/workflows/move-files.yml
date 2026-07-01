@@ -1,0 +1,22 @@
+name: Move Videos to Subfolder
+on:
+  workflow_dispatch:
+jobs:
+  move-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: videos
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Move video files to videos/ subfolder
+        run: |
+          mkdir -p videos
+          git mv tip-common-mistakes.mp4 videos/tip-common-mistakes.mp4 || true
+          git mv tip-mallet-position.mp4 videos/tip-mallet-position.mp4 || true
+          cp Niels_van_Baasbank_Foot_Mallet.mp4 videos/tip-foot-mallet.mp4
+          git add videos/tip-foot-mallet.mp4
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git commit -m "Move tip-*.mp4 files to videos/ subfolder"
+          git push
