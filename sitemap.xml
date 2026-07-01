@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://nielspolo.com/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <video:video>
+      <video:thumbnail_loc>https://nielspolo.com/posters/tip-foot-mallet.jpg</video:thumbnail_loc>
+      <video:title>Foot Mallet Drill — Offside Practice Polo Coaching Tip</video:title>
+      <video:description>Polo coach Niels van Baasbank demonstrates a foot mallet drill focused on offside practice, part of his free coaching tips series filmed at Desert Palm Polo Club, Dubai.</video:description>
+      <video:content_loc>https://nielspolo.com/videos/tip-foot-mallet.mp4</video:content_loc>
+      <video:duration>51</video:duration>
+      <video:publication_date>2026-07-01</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://nielspolo.com/posters/tip-common-mistakes.jpg</video:thumbnail_loc>
+      <video:title>Most Common Polo Mistakes — Coaching Insight</video:title>
+      <video:description>Polo coach Niels van Baasbank breaks down the most common mistakes players make, part of his free coaching tips series filmed at Desert Palm Polo Club, Dubai.</video:description>
+      <video:content_loc>https://nielspolo.com/videos/tip-common-mistakes.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-07-01</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://nielspolo.com/posters/tip-mallet-position.jpg</video:thumbnail_loc>
+      <video:title>Mallet Position — Practice Advice</video:title>
+      <video:description>Polo coach Niels van Baasbank shares practice advice on correct mallet position, part of his free coaching tips series filmed at Desert Palm Polo Club, Dubai.</video:description>
+      <video:content_loc>https://nielspolo.com/videos/tip-mallet-position.mp4</video:content_loc>
+      <video:duration>28</video:duration>
+      <video:publication_date>2026-07-01</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://nielspolo.com/#about</loc>
@@ -15,6 +43,12 @@
   <url>
     <loc>https://nielspolo.com/#coaching</loc>
     <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nielspolo.com/#tips</loc>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
