@@ -30,6 +30,7 @@
   .hero-accent { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.08); }
   .hero-accent::before { content: ''; position: absolute; inset: 60px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.12); }
   .hero-accent::after { content: ''; position: absolute; inset: 130px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.18); }
+  .hero-accent-photo { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 440px; height: 440px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 80px rgba(0,0,0,0.55); opacity: 0.94; }
   .hero-content { position: relative; padding: 0 4rem; max-width: 800px; animation: fadeUp 1s ease both; }
   .hero-tag { display: inline-block; font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(201,168,76,0.3); }
   .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.05; font-weight: 900; margin-bottom: 1.5rem; }
@@ -123,6 +124,7 @@
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     .hero-content { padding: 0 1.5rem; }
+    .hero-accent-photo { width: 260px; height: 260px; }
     .hero-stats { right: 1.5rem; gap: 1.5rem; bottom: 2rem; }
     .stat-num { font-size: 1.6rem; }
     .section { padding: 4rem 1.5rem; }
@@ -153,7 +155,9 @@
 <section class="hero" id="top">
   <div class="hero-bg"></div>
   <div class="hero-pattern"></div>
-  <div class="hero-accent"></div>
+  <div class="hero-accent">
+    <img src="hero-action.png" alt="Niels van Baasbank mid-swing during a polo coaching session in Dubai" class="hero-accent-photo">
+  </div>
   <div class="hero-content">
     <span class="hero-tag">Niels van Baasbank · HPA Level 2 Coach · Desert Palm Polo Club · Dubai</span>
     <h1>Polo Coaching<br>in <em>Dubai</em></h1>
@@ -255,7 +259,7 @@
   <div class="tips-grid">
     <div class="tip-card">
       <div class="tip-video-wrap">
-        <video controls playsinline preload="metadata" poster="">
+        <video controls playsinline preload="metadata" poster="posters/tip-foot-mallet.jpg" title="Foot Mallet Drill — Offside Practice with Polo Coach Niels van Baasbank" aria-label="Foot mallet offside practice polo coaching tip by Niels van Baasbank">
           <source src="videos/tip-foot-mallet.mp4" type="video/mp4">
         </video>
       </div>
@@ -266,7 +270,7 @@
     </div>
     <div class="tip-card">
       <div class="tip-video-wrap">
-        <video controls playsinline preload="metadata" poster="">
+        <video controls playsinline preload="metadata" poster="posters/tip-common-mistakes.jpg" title="Most Common Polo Mistakes — Coaching Insight from Niels van Baasbank" aria-label="Most common polo mistakes coaching tip by Niels van Baasbank">
           <source src="videos/tip-common-mistakes.mp4" type="video/mp4">
         </video>
       </div>
@@ -277,7 +281,7 @@
     </div>
     <div class="tip-card">
       <div class="tip-video-wrap">
-        <video controls playsinline preload="metadata" poster="">
+        <video controls playsinline preload="metadata" poster="posters/tip-mallet-position.jpg" title="Mallet Position Practice Advice with Polo Coach Niels van Baasbank" aria-label="Mallet position practice advice polo coaching tip by Niels van Baasbank">
           <source src="videos/tip-mallet-position.mp4" type="video/mp4">
         </video>
       </div>
@@ -464,6 +468,47 @@
     "hasCredential": "HPA Level 2 Coach"
   }
 }
+</script>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Foot Mallet Drill — Offside Practice Polo Coaching Tip",
+    "description": "Polo coach Niels van Baasbank demonstrates a foot mallet drill focused on offside practice, part of his free coaching tips series filmed at Desert Palm Polo Club, Dubai.",
+    "thumbnailUrl": "https://nielspolo.com/posters/tip-foot-mallet.jpg",
+    "uploadDate": "2026-07-01",
+    "duration": "PT51S",
+    "contentUrl": "https://nielspolo.com/videos/tip-foot-mallet.mp4",
+    "embedUrl": "https://nielspolo.com/videos/tip-foot-mallet.mp4",
+    "publisher": { "@type": "Person", "name": "Niels van Baasbank" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Most Common Polo Mistakes — Coaching Insight",
+    "description": "Polo coach Niels van Baasbank breaks down the most common mistakes players make, part of his free coaching tips series filmed at Desert Palm Polo Club, Dubai.",
+    "thumbnailUrl": "https://nielspolo.com/posters/tip-common-mistakes.jpg",
+    "uploadDate": "2026-07-01",
+    "duration": "PT1M0S",
+    "contentUrl": "https://nielspolo.com/videos/tip-common-mistakes.mp4",
+    "embedUrl": "https://nielspolo.com/videos/tip-common-mistakes.mp4",
+    "publisher": { "@type": "Person", "name": "Niels van Baasbank" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Mallet Position — Practice Advice",
+    "description": "Polo coach Niels van Baasbank shares practice advice on correct mallet position, part of his free coaching tips series filmed at Desert Palm Polo Club, Dubai.",
+    "thumbnailUrl": "https://nielspolo.com/posters/tip-mallet-position.jpg",
+    "uploadDate": "2026-07-01",
+    "duration": "PT28S",
+    "contentUrl": "https://nielspolo.com/videos/tip-mallet-position.mp4",
+    "embedUrl": "https://nielspolo.com/videos/tip-mallet-position.mp4",
+    "publisher": { "@type": "Person", "name": "Niels van Baasbank" }
+  }
+]
 </script>
 
 </body>
