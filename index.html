@@ -122,6 +122,11 @@
   .submit-btn { background: var(--gold); color: var(--dark); padding: 1rem; font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; border: none; cursor: pointer; margin-top: 0.5rem; transition: opacity 0.3s; }
   .submit-btn:hover { opacity: 0.85; }
 
+  .faq-list { max-width: 800px; margin-top: 3rem; }
+  .faq-item { border-bottom: 1px solid rgba(201,168,76,0.15); padding: 1.6rem 0; }
+  .faq-item h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.7rem; color: var(--cream); }
+  .faq-item p { font-size: 0.92rem; font-weight: 400; color: rgba(247,242,232,0.85); line-height: 1.8; }
+
   footer { padding: 2.2rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,168,76,0.1); }
   .footer-copy { font-size: 0.95rem; color: rgba(247,242,232,0.95); letter-spacing: 0.08em; }
   .footer-links { display: flex; gap: 2rem; }
@@ -156,6 +161,7 @@
     <li><a href="#coaching">Coaching</a></li>
     <li><a href="#tips">Video Tips</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Session</button>
@@ -377,6 +383,35 @@
 
 <div class="divider"></div>
 
+<section class="section" id="faq">
+  <p class="section-label">FAQ</p>
+  <h2 class="section-title">Common Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>How much are polo lessons in Dubai?</h3>
+      <p>Private polo coaching with Niels is tailored to your level and goals — get in touch for current session rates. Group and corporate rates are also available.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need experience to start playing polo?</h3>
+      <p>No. The Beginner Foundations program is built for complete beginners, covering grip, stance, and horse control from your very first session.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Where can I learn polo in Dubai?</h3>
+      <p>Niels coaches at Desert Palm Polo Club, Dubai — offering private 1-on-1 lessons, stick &amp; ball clinics, and tournament preparation for all levels.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is a polo handicap?</h3>
+      <p>A polo handicap rates a player's skill from -2 (beginner) up to +10 (elite professional). Niels holds a career-high handicap of +3 and coaches players at every stage of that scale.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you offer corporate polo experiences?</h3>
+      <p>Yes. Niels runs corporate and social polo sessions for groups — a safe, professional introduction to the sport of kings, no experience required.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <section class="section contact-bg" id="contact">
   <p class="section-label">Get in Touch</p>
   <h2 class="section-title">Book a Session with Niels</h2>
@@ -518,6 +553,55 @@
     "publisher": { "@type": "Person", "name": "Niels van Baasbank" }
   }
 ]
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much are polo lessons in Dubai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Private polo coaching with Niels van Baasbank is tailored to your level and goals. Get in touch via nielspolo.com for current session rates and group/corporate options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need experience to start playing polo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Beginner Foundations program is designed for complete beginners, covering grip, stance, and horse control from the first session."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I learn polo in Dubai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Niels van Baasbank coaches at Desert Palm Polo Club in Dubai, offering private 1-on-1 lessons, stick and ball clinics, and tournament preparation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a polo handicap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A polo handicap rates a player's skill level, ranging from -2 for beginners up to +10 for elite professionals. Niels van Baasbank holds a career-high handicap of +3."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer corporate polo experiences?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, corporate and social polo sessions are available for groups in Dubai, providing a safe and professional introduction to the sport."
+      }
+    }
+  ]
+}
 </script>
 
 </body>
