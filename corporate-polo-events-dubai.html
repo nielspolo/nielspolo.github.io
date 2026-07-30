@@ -34,7 +34,7 @@
 
   .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0E0E0E 0%, #1a1208 40%, #0E0E0E 100%); }
-  .hero-pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(201,168,76,0.03) 80px, rgba(201,168,76,0.03) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(201,168,76,0.03) 80px, rgba(201,168,76,0.03) 81px); }
+  .hero-pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(201,168,76,0.03) 80px, rgba(201,168,76,0.03) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(201,168,76,0.03) 80px, rgba(201,168,76,0.03) 81px); } .hero-photo { position: absolute; right: 3rem; top: 50%; transform: translateY(-50%); width: 400px; max-width: 36vw; opacity: 0.95; pointer-events: none; } @media (max-width: 900px) { .hero-photo { display: none; } }
   .hero-accent { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.08); }
   .hero-accent::before { content: ''; position: absolute; inset: 60px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.12); }
   .hero-accent::after { content: ''; position: absolute; inset: 130px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.18); }
@@ -167,7 +167,7 @@
 
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-pattern"></div>
+  <div class="hero-pattern"></div><img class="hero-photo" src="polo-swing.jpg" alt="Niels van Baasbank playing polo at Desert Palm Polo Club">
   <div class="hero-content">
     <span class="hero-tag">Corporate &amp; Social Events &middot; Desert Palm Polo Club &middot; Dubai</span>
     <h1>Corporate Polo Events <em>in Dubai</em></h1>
