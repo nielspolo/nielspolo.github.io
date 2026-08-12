@@ -83,10 +83,10 @@
   .service-card p { font-size: 0.88rem; font-weight: 400; color: rgba(247,242,232,0.85); line-height: 1.75; }
   .service-tag { display: inline-block; margin-top: 1.2rem; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
 
-  .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; align-items: start; }
-  .testimonial { background: var(--mid); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; align-items: stretch; }
+  .testimonial { background: var(--mid); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; display: flex; flex-direction: column; }
   .testimonial-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; line-height: 1.7; color: rgba(247,242,232,0.95); margin-bottom: 1.5rem; }
-  .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+  .testimonial-author { display: flex; align-items: center; gap: 1rem; margin-top: auto; }
   .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(201,168,76,0.2); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold); flex-shrink: 0; }
   .author-name { font-size: 0.85rem; font-weight: 500; }
   .author-title { font-size: 0.75rem; color: rgba(247,242,232,0.65); }
