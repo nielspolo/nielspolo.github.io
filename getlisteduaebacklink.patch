@@ -1,0 +1,120 @@
+diff --git a/about.html b/about.html
+index b57055d..0c749ee 100644
+--- a/about.html
++++ b/about.html
+@@ -176,6 +176,7 @@ footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.
+ <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+ <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+ <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+ </div>
+ </footer>
+ 
+diff --git a/book-a-polo-lesson.html b/book-a-polo-lesson.html
+index cd57e47..907af40 100644
+--- a/book-a-polo-lesson.html
++++ b/book-a-polo-lesson.html
+@@ -166,6 +166,7 @@ footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.
+ <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+ <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+ <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+ </div>
+ </footer>
+ 
+diff --git a/coaching.html b/coaching.html
+index 8abf1a7..d72ec91 100644
+--- a/coaching.html
++++ b/coaching.html
+@@ -236,6 +236,7 @@
+     <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+     <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+     <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+   </div>
+ </footer>
+ 
+diff --git a/contact.html b/contact.html
+index bf04279..a1856a6 100644
+--- a/contact.html
++++ b/contact.html
+@@ -147,6 +147,7 @@ footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.
+ <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+ <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+ <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+ </div>
+ </footer>
+ 
+diff --git a/corporate-polo-events-dubai.html b/corporate-polo-events-dubai.html
+index 5eb7dab..1183eb8 100644
+--- a/corporate-polo-events-dubai.html
++++ b/corporate-polo-events-dubai.html
+@@ -253,6 +253,7 @@
+     <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+     <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+     <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+   </div>
+ </footer>
+ 
+diff --git a/faq.html b/faq.html
+index 8b60d31..e1cb2d3 100644
+--- a/faq.html
++++ b/faq.html
+@@ -220,6 +220,7 @@
+     <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+     <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+     <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+   </div>
+ </footer>
+ 
+diff --git a/index.html b/index.html
+index d915421..f3720ca 100644
+--- a/index.html
++++ b/index.html
+@@ -403,6 +403,7 @@
+     <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+     <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+     <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+   </div>
+ </footer>
+ 
+diff --git a/private-polo-coaching-dubai.html b/private-polo-coaching-dubai.html
+index b12b5e2..697fb5c 100644
+--- a/private-polo-coaching-dubai.html
++++ b/private-polo-coaching-dubai.html
+@@ -328,6 +328,7 @@
+     <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+     <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+     <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+   </div>
+ </footer>
+ 
+diff --git a/testimonials.html b/testimonials.html
+index c46b5bf..49c7a1a 100644
+--- a/testimonials.html
++++ b/testimonials.html
+@@ -346,6 +346,7 @@
+     <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+     <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+     <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+   </div>
+ </footer>
+ 
+diff --git a/video-tips.html b/video-tips.html
+index 3a3b02b..adaab2a 100644
+--- a/video-tips.html
++++ b/video-tips.html
+@@ -233,6 +233,7 @@
+     <a href="https://instagram.com/nielsvanbaasbank" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+     <a href="https://www.linkedin.com/in/nielsvanbaasbank/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+     <a href="https://wa.me/971501896869" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
++<a href="https://www.getlisteduae.com/listings/polo-lessons-corporate-polo-days" target="_blank" rel="dofollow">GetListedUAE</a>
+   </div>
+ </footer>
+ 
